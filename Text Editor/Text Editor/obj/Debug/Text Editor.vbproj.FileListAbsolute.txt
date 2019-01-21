@@ -1,0 +1,36 @@
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\bin\Debug\Text Editor.exe.config
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\bin\Debug\Text Editor.exe
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\bin\Debug\Text Editor.pdb
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\bin\Debug\Text Editor.xml
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.vbprojAssemblyReference.cache
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text_Editor.MainForm.resources
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text_Editor.Resources.resources
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.vbproj.GenerateResource.cache
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.vbproj.CoreCompileInputs.cache
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.exe
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.xml
+C:\Users\huberja\AppData\Local\Temporary Projects\Text Editor\obj\Debug\Text Editor.pdb
+D:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.exe.config
+D:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.exe
+D:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.pdb
+D:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.xml
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbprojAssemblyReference.cache
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text_Editor.MainForm.resources
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text_Editor.Resources.resources
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.GenerateResource.cache
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.CoreCompileInputs.cache
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.exe
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.xml
+D:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.pdb
+F:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.exe.config
+F:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.exe
+F:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.pdb
+F:\VB Projekty\Text Editor\Text Editor\bin\Debug\Text Editor.xml
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbprojAssemblyReference.cache
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text_Editor.MainForm.resources
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text_Editor.Resources.resources
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.GenerateResource.cache
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.CoreCompileInputs.cache
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.exe
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.xml
+F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.pdb
