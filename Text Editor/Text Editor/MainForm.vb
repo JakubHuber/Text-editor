@@ -132,4 +132,50 @@ Public Class MainForm
     End Sub
 #End Region
 
+#Region "Undo Cut copy paste"
+    Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
+        With MyTextBox
+            If .CanUndo Then
+                .Undo()
+                .ClearUndo()
+            End If
+        End With
+    End Sub
+
+    Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click, DeleteToolStripMenuItem.Click, CutToolStripButton.Click
+        If MyTextBox.SelectedText <> String.Empty Then
+            MyTextBox.Cut()
+        End If
+    End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click, CopyToolStripButton.Click
+        If MyTextBox.SelectionLength > 0 Then
+            MyTextBox.Copy()
+        End If
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+        If Clipboard.GetDataObject.GetDataPresent(DataFormats.Text) Then
+            If MyTextBox.SelectionLength > 0 Then
+                'Paste over selected text
+                If MessageBox.Show(Me, "Do you want to paste over current selection?", "Paste over confirm",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.No Then
+                    'Move selection to the point after current selection and paste
+                    MyTextBox.SelectionStart = MyTextBox.SelectionStart + MyTextBox.SelectionLength
+                End If
+            End If
+            MyTextBox.Paste()
+        End If
+    End Sub
+
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+        MyTextBox.SelectAll()
+    End Sub
+
+    Private Sub TimeDateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeDateToolStripMenuItem.Click
+        MyTextBox.SelectedText = Now.ToShortTimeString & " " & Today.ToShortDateString
+        MyTextBox.Modified = True
+    End Sub
+#End Region
+
 End Class

@@ -34,3 +34,15 @@ F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.CoreCompileI
 F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.exe
 F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.xml
 F:\VB Projekty\Text Editor\Text Editor\obj\Debug\Text Editor.pdb
+D:\Git Repos\Text editor\Text Editor\Text Editor\bin\Debug\Text Editor.exe.config
+D:\Git Repos\Text editor\Text Editor\Text Editor\bin\Debug\Text Editor.exe
+D:\Git Repos\Text editor\Text Editor\Text Editor\bin\Debug\Text Editor.pdb
+D:\Git Repos\Text editor\Text Editor\Text Editor\bin\Debug\Text Editor.xml
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.vbprojAssemblyReference.cache
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text_Editor.MainForm.resources
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text_Editor.Resources.resources
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.GenerateResource.cache
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.CoreCompileInputs.cache
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.exe
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.xml
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.pdb
