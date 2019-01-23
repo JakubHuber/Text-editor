@@ -176,6 +176,40 @@ Public Class MainForm
         MyTextBox.SelectedText = Now.ToShortTimeString & " " & Today.ToShortDateString
         MyTextBox.Modified = True
     End Sub
+
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+        With FontDialog1
+            .ShowColor = True
+            .ShowApply = True
+            .Font = MyTextBox.Font
+            .Color = MyTextBox.ForeColor
+            If .ShowDialog = DialogResult.OK Then
+                With MyTextBox
+                    .Font = FontDialog1.Font
+                    .ForeColor = FontDialog1.Color
+                End With
+            End If
+        End With
+    End Sub
+
+    Private Sub FontDialog1_Apply(sender As Object, e As EventArgs) Handles FontDialog1.Apply
+        With MyTextBox
+            .Font = FontDialog1.Font
+            .ForeColor = FontDialog1.Color
+        End With
+    End Sub
+
+    Private Sub WordWrapToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.Click
+        MyTextBox.WordWrap = Not MyTextBox.WordWrap
+        WordWrapToolStripMenuItem.Checked = MyTextBox.WordWrap
+        If MyTextBox.WordWrap Then
+            MyTextBox.ScrollBars = ScrollBars.Vertical
+        Else
+            MyTextBox.ScrollBars = ScrollBars.Both
+        End If
+    End Sub
+
+
 #End Region
 
 End Class
