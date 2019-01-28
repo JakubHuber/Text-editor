@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Text Editor")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("My text editor program with printing abbility")>
+<Assembly: AssemblyCompany("Hubers computers")>
 <Assembly: AssemblyProduct("Text Editor")>
 <Assembly: AssemblyCopyright("Copyright ©  2019")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("Huber")>
 
 <Assembly: ComVisible(False)>
 

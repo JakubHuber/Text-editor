@@ -46,3 +46,5 @@ D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.vbproj.Co
 D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.exe
 D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.xml
 D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text Editor.pdb
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text_Editor.AboutBox1.resources
+D:\Git Repos\Text editor\Text Editor\Text Editor\obj\Debug\Text_Editor.Singleton.resources

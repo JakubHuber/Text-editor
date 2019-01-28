@@ -9,6 +9,7 @@ Public Class MainForm
     Private workingPathFile As String = String.Empty
     Private Const fileFilter As String = "Plain text (*.txt)|*.txt|Log files (*.log)|*.log|All files (*.*)|*.*"
     Private workingPath As String = My.Computer.FileSystem.SpecialDirectories.Desktop
+    Public findString As String = String.Empty
 
 #End Region
 
@@ -209,7 +210,31 @@ Public Class MainForm
         End If
     End Sub
 
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        AboutBox1.ShowDialog()
+    End Sub
 
 #End Region
+
+#Region "Find/Find replace/Find next"
+
+
+    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
+        'Singelton design pattern
+        Dim aSingeltonForm As Singleton = Singleton.GetInstance
+        aSingeltonForm.Show()
+    End Sub
+
+    Private Sub FindNextToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindNextToolStripMenuItem.Click
+        Dim aSingeltonForm As Singleton = Singleton.GetInstance
+        aSingeltonForm.Show()
+    End Sub
+
+    Private Sub ReplaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceToolStripMenuItem.Click
+
+    End Sub
+#End Region
+
+
 
 End Class
