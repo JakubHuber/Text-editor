@@ -32,15 +32,13 @@ Partial Class Singleton
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.ReplaceButton = New System.Windows.Forms.Button()
         Me.ReplaceAllButton = New System.Windows.Forms.Button()
-        Me.ReplaceTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 14)
+        Me.Label1.Location = New System.Drawing.Point(16, 14)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 20)
@@ -57,7 +55,7 @@ Partial Class Singleton
         'MatchCaseCheckBox
         '
         Me.MatchCaseCheckBox.AutoSize = True
-        Me.MatchCaseCheckBox.Location = New System.Drawing.Point(20, 94)
+        Me.MatchCaseCheckBox.Location = New System.Drawing.Point(20, 61)
         Me.MatchCaseCheckBox.Name = "MatchCaseCheckBox"
         Me.MatchCaseCheckBox.Size = New System.Drawing.Size(102, 24)
         Me.MatchCaseCheckBox.TabIndex = 2
@@ -68,7 +66,7 @@ Partial Class Singleton
         '
         Me.GroupBox1.Controls.Add(Me.DownRadioButton)
         Me.GroupBox1.Controls.Add(Me.UpRadioButton)
-        Me.GroupBox1.Location = New System.Drawing.Point(128, 80)
+        Me.GroupBox1.Location = New System.Drawing.Point(128, 47)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(154, 76)
         Me.GroupBox1.TabIndex = 3
@@ -130,33 +128,14 @@ Partial Class Singleton
         Me.ReplaceAllButton.Name = "ReplaceAllButton"
         Me.ReplaceAllButton.Size = New System.Drawing.Size(125, 27)
         Me.ReplaceAllButton.TabIndex = 7
-        Me.ReplaceAllButton.Text = "Replace &All"
+        Me.ReplaceAllButton.Text = "Replace A&ll"
         Me.ReplaceAllButton.UseVisualStyleBackColor = True
-        '
-        'ReplaceTextBox
-        '
-        Me.ReplaceTextBox.Location = New System.Drawing.Point(96, 50)
-        Me.ReplaceTextBox.Name = "ReplaceTextBox"
-        Me.ReplaceTextBox.Size = New System.Drawing.Size(186, 27)
-        Me.ReplaceTextBox.TabIndex = 9
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 50)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 20)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Replace with"
         '
         'Singleton
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(421, 216)
-        Me.Controls.Add(Me.ReplaceTextBox)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ReplaceAllButton)
         Me.Controls.Add(Me.ReplaceButton)
         Me.Controls.Add(Me.CancelButton)
@@ -186,6 +165,4 @@ Partial Class Singleton
     Friend WithEvents CancelButton As Button
     Friend WithEvents ReplaceButton As Button
     Friend WithEvents ReplaceAllButton As Button
-    Friend WithEvents ReplaceTextBox As TextBox
-    Friend WithEvents Label2 As Label
 End Class

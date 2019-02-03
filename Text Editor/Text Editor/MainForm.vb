@@ -231,7 +231,42 @@ Public Class MainForm
     End Sub
 
     Private Sub ReplaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceToolStripMenuItem.Click
+        Dim aSingeltonForm As Singleton = Singleton.GetInstance
+        aSingeltonForm.Show()
+    End Sub
 
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If MyTextBox.CanUndo Then
+            UndoToolStripMenuItem.Enabled = True
+        Else
+            UndoToolStripMenuItem.Enabled = True
+        End If
+
+        If MyTextBox.Text.Length > 0 Then
+            CutToolStripButton.Enabled = True
+            CutToolStripMenuItem.Enabled = True
+            CopyToolStripButton.Enabled = True
+            CopyToolStripMenuItem.Enabled = True
+            DeleteToolStripMenuItem.Enabled = True
+        Else
+            CutToolStripButton.Enabled = False
+            CutToolStripMenuItem.Enabled = False
+            CopyToolStripButton.Enabled = False
+            CopyToolStripMenuItem.Enabled = False
+            DeleteToolStripMenuItem.Enabled = False
+        End If
+
+        If String.IsNullOrWhiteSpace(MyTextBox.Text) Then
+            SaveToolStripButton.Enabled = False
+            SaveToolStripMenuItem.Enabled = False
+            SaveAsToolStripMenuItem.Enabled = False
+            SaveToolStripButton.Enabled = False
+        Else
+            SaveToolStripButton.Enabled = True
+            SaveToolStripMenuItem.Enabled = True
+            SaveAsToolStripMenuItem.Enabled = True
+            SaveToolStripButton.Enabled = True
+        End If
     End Sub
 #End Region
 
