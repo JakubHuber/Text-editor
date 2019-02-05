@@ -127,6 +127,8 @@ Public Class MainForm
 
     Private Sub MainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         'Save settings
+        SaveSettings()
+
         If SaveChanges() Then
             SaveToolStripMenuItem_Click(sender, e)
         End If
@@ -270,6 +272,42 @@ Public Class MainForm
     End Sub
 #End Region
 
+#Region "Apply Settings"
+    Private Sub ApplySettings()
+        If My.Settings.FormSize <> Drawing.Size.Empty Then
+            Me.Size = My.Settings.FormSize
+        End If
 
+        If My.Settings.FormLocation <> Drawing.Point.Empty Then
+            Me.Location = My.Settings.FormLocation
+        End If
 
+        If My.Settings.FormFontColor <> System.Drawing.Color.Empty Then
+            MyTextBox.ForeColor = My.Settings.FormFontColor
+        End If
+
+        If (My.Settings.Font.Name <> String.Empty) AndAlso (My.Settings.Font.Size > 0) Then
+            MyTextBox.Font = My.Settings.Font
+        End If
+
+    End Sub
+#End Region
+
+    Private Sub SaveSettings()
+        If Me.WindowState = FormWindowState.Normal Then
+            My.Settings.FormSize = Me.Size
+        Else
+            My.Settings.FormSize = Me.RestoreBounds.Size
+        End If
+
+        With My.Settings
+            .FormLocation = Me.Location
+            .FormFontColor = MyTextBox.ForeColor
+            .Font = MyTextBox.Font
+        End With
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ApplySettings()
+    End Sub
 End Class
