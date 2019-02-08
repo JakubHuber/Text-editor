@@ -11,6 +11,11 @@ Public Class MainForm
     Private workingPath As String = My.Computer.FileSystem.SpecialDirectories.Desktop
     Public findString As String = String.Empty
 
+    'Drag and drop
+    Private mouseIsDown As Boolean = False
+    Private textToMove As String = String.Empty
+    Private textToMoveStart As Integer
+
 #End Region
 
 #Region "File menu"
@@ -310,4 +315,83 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         ApplySettings()
     End Sub
+
+    Private Sub MyTextBox_MouseDown(sender As Object, e As MouseEventArgs) Handles MyTextBox.MouseDown
+        'Internal drag and drop
+        With MyTextBox
+            If .SelectionLength > 0 Then
+                textToMove = .SelectedText
+                textToMoveStart = .SelectionStart
+                mouseIsDown = True
+            End If
+        End With
+    End Sub
+
+    Private Sub MyTextBox_MouseMove(sender As Object, e As MouseEventArgs) Handles MyTextBox.MouseMove
+        'if dragging set dragdrop effect
+        With MyTextBox
+            If mouseIsDown AndAlso (.SelectionLength > 0) Then
+                .DoDragDrop(.SelectedText, DragDropEffects.Copy Or DragDropEffects.Move)
+            End If
+        End With
+        mouseIsDown = False
+    End Sub
+
+    Private Sub MyTextBox_DragOver(sender As Object, e As DragEventArgs) Handles MyTextBox.DragOver
+        'determine cursor location
+        With MyTextBox
+            .Select(.GetCharIndexFromPosition(.PointToClient(Cursor.Position)), 0)
+            .ScrollToCaret()
+            .Focus()
+        End With
+    End Sub
+
+    Private Sub MyTextBox_DragEnter(sender As Object, e As DragEventArgs) Handles MyTextBox.DragEnter
+        'Check the data format being droped
+        If e.Data.GetDataPresent(DataFormats.Text) Then
+            If (e.KeyState And 8) = 8 AndAlso (e.AllowedEffect And DragDropEffects.Copy) = DragDropEffects.Copy Then
+                'ctrl for copy
+                e.Effect = DragDropEffects.Copy
+            Else
+                e.Effect = DragDropEffects.Move
+            End If
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+
+    Private Sub MyTextBox_DragDrop(sender As Object, e As DragEventArgs) Handles MyTextBox.DragDrop
+        With MyTextBox
+            'determine cursor location and insert data
+            Dim index As Integer = .GetCharIndexFromPosition(.PointToClient(Cursor.Position))
+            .Text = .Text.Insert(index, e.Data.GetData(DataFormats.Text).ToString)
+            'If internal move then delete data from previous location
+            If (e.Effect = DragDropEffects.Move) AndAlso textToMove <> String.Empty Then
+                Dim foundPosition As Integer = .Text.IndexOf(textToMove, textToMoveStart, StringComparison.OrdinalIgnoreCase)
+                If foundPosition > -1 Then
+                    .Select(foundPosition, textToMove.Length)
+                    .SelectedText = String.Empty
+                    'reposition index
+                    If foundPosition < index Then
+                        index -= textToMove.Length
+                    End If
+                    If index < 0 Then
+                        index = 0
+                    End If
+                End If
+            End If
+            'higlhlight new or move data
+            .Select(index, e.Data.GetData(DataFormats.Text).ToString.Length)
+            .ScrollToCaret()
+            .Focus()
+            .Modified = True
+            textToMove = String.Empty
+            textToMoveStart = 0
+
+        End With
+    End Sub
+
+
+
+
 End Class
